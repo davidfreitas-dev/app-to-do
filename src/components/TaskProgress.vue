@@ -17,7 +17,7 @@ export default({
 })
 </script>
 
-<style>
+<style scoped>
 	.progress {
         display: flex;
         flex-direction: column;
@@ -29,6 +29,8 @@ export default({
         border-radius: 5px;
 		margin-top: 1rem;
 		font-weight: 700;
+        color: #fff;
+        text-shadow: 1px 1px 2px black;
 	}
 
 	.progress-bar {

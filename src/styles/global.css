@@ -8,29 +8,34 @@
     --secondary: #f4f8f7;
     --warning: #f4be38;
     --danger: #e25d6c;
-    --box-shadow: 0px -5px 10px 3px #222222;
+    --shadow: #686b6a;
 }
 
 .dark:root {
     --bg: #1c2230;
-    --font: #686b6a;
+    --font: #fff;
     --main: #3eb398;
     --hover-main: #71ddc0;
-    --secondary: #f4f8f7;
+    --secondary: #232a3b;
     --warning: #f4be38;
     --danger: #e25d6c;
-    --box-shadow: 0px -5px 10px 3px #222222;
+    --shadow: #686b6a;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    --ion-background-color: var(--bg);
 }
 
 body {
-    color: var(--font);
     background-color: var(--bg);
     transition: 0.2s linear;
+}
+
+.main-color {
+    color: var(--main);
+}
+
+.main-color:hover {
+    color: var(--hover-main);
 }

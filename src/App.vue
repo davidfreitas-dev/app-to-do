@@ -10,19 +10,19 @@
         <ion-list>
           <ion-menu-toggle>
             <ion-item router-link="/">
-              <ion-icon name="save" slot="start"></ion-icon>
+              <ion-icon name="save" slot="start" class="main-color"></ion-icon>
               <ion-label>Listas Salvas</ion-label>
             </ion-item>
           </ion-menu-toggle>
           <ion-menu-toggle>
             <ion-item router-link="/">
-              <ion-icon name="heart" slot="start"></ion-icon>
+              <ion-icon name="heart" slot="start" class="main-color"></ion-icon>
               <ion-label>Favoritas</ion-label>
             </ion-item>
           </ion-menu-toggle>
           <ion-menu-toggle>
             <ion-item router-link="/">
-              <ion-icon name="trash" slot="start"></ion-icon>
+              <ion-icon name="trash" slot="start" class="main-color"></ion-icon>
               <ion-label>Lixeira</ion-label>
             </ion-item>
           </ion-menu-toggle>

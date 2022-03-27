@@ -2,10 +2,18 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Task Manager</ion-title>
-        <ion-buttons slot="start">
-          <ion-menu-button menu="main-menu"></ion-menu-button>
-        </ion-buttons>
+        <ion-row class="ion-justify-content-between ion-align-items-center">
+          <ion-row class="ion-align-items-center">
+            <ion-buttons>
+              <ion-menu-button menu="main-menu" class="main-color"></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Task Manager</ion-title>
+          </ion-row>
+          <ion-row class="ion-justify-content-between ion-align-items-center">
+              <ion-icon name="moon"></ion-icon>
+              <ion-toggle class="themeToggle" @click="toggleTheme"></ion-toggle>
+            </ion-row>
+        </ion-row>        
       </ion-toolbar>
     </ion-header>
     
@@ -78,9 +86,27 @@ export default ({
     },
     toggleTaskState(i) {
       this.tasks[i].pending = !this.tasks[i].pending
-    }
+    },
+    loadColorsTheme() {
+      const toggle = document.querySelector(".themeToggle");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+      prefersDark.addEventListener("change", (e) => checkToggle(e.matches));
+      checkToggle(prefersDark.matches);
+      
+      function checkToggle(shouldCheck) {
+        toggle.checked = shouldCheck;
+        document.documentElement.classList.toggle("dark");
+      }
+    },
+    toggleTheme() {
+      document.documentElement.classList.toggle("dark");
+    },
   },
   created() {
+    this.$nextTick(() => {
+      this.loadColorsTheme();
+    });
+    
     const json = localStorage.getItem('tasks')
     const array = JSON.parse(json) || []
     this.tasks = Array.isArray(array) ? array : []
@@ -111,5 +137,17 @@ export default ({
 
 #container a {
   text-decoration: none;
+}
+
+ion-title, ion-icon {
+  color: var(--font);
+}
+
+ion-toggle {
+  --background: #c3c3c3;
+  --background-checked: var(--hover-main);
+
+  --handle-background: #fff;
+  --handle-background-checked: var(--main);
 }
 </style>

@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 	.task {
 		display: flex;
 		justify-content: center;
@@ -39,6 +39,7 @@ export default {
 
     .task small {
         color: #f1f1f1;
+        text-shadow: 1px 1px 2px var(--shadow);
 		font-size: 1.1rem;
         font-weight: 500;
         line-height: 1.3rem;

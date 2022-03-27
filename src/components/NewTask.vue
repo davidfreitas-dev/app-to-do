@@ -1,6 +1,6 @@
 <template>
     <div class="form">
-        <input v-model="name" @keydown.enter="add" type="text" placeholder="nome da tarefa" />
+        <input v-model="name" @keydown.enter="add" type="text" placeholder="Nome da Tarefa" />
         <button @click="add">
 			<ion-icon name="add"></ion-icon>
 		</button>
@@ -23,7 +23,7 @@ export default({
 })
 </script>
 
-<style>
+<style scoped>
     .form {
 		display: flex;
 		justify-content: center;
@@ -52,7 +52,7 @@ export default({
 		height: 45px;
 		border: none;
 		padding: 0 15px;
-		color: white;
+		color: #fff;
 		font-size: 1.5rem;
 		font-weight: bold;
 		border-radius: 5px;

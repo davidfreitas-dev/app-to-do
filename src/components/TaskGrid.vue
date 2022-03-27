@@ -26,7 +26,7 @@
     })
 </script>
 
-<style>
+<style scoped>
 	.tasks {
         display: grid;
         grid-template-columns: repeat(5, 1fr);

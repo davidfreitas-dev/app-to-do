@@ -20,7 +20,7 @@ import '@ionic/vue/css/text-transformation.css';
 import '@ionic/vue/css/flex-utils.css';
 import '@ionic/vue/css/display.css';
 
-/* Theme variables */
+/* Global Styles */
 import './styles/global.css';
 
 const app = createApp(App)
