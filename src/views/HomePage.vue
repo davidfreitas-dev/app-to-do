@@ -12,7 +12,7 @@
           <ion-row class="ion-justify-content-between ion-align-items-center">
               <ion-icon name="moon"></ion-icon>
               <ion-toggle class="themeToggle" @click="toggleTheme"></ion-toggle>
-            </ion-row>
+          </ion-row>
         </ion-row>        
       </ion-toolbar>
     </ion-header>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonButtons, IonMenuButton, IonToggle, IonIcon } from '@ionic/vue';
 import TaskProgress from '@/components/TaskProgress'
 import NewTask from '@/components/NewTask'
 import TaskGrid from '@/components/TaskGrid'
@@ -41,6 +41,11 @@ export default ({
     IonPage,
     IonTitle,
     IonToolbar,
+    IonRow,
+    IonButtons,
+    IonMenuButton,
+    IonToggle,
+    IonIcon,
 
     TaskProgress,
     NewTask,

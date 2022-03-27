@@ -8,7 +8,12 @@
 </template>
 
 <script>
+import { IonIcon } from '@ionic/vue';
+
 export default({
+	components: {
+		IonIcon,
+	},
     data() {
         return {            
             name: ''
@@ -28,13 +33,12 @@ export default({
 		display: flex;
 		justify-content: center;
 		align-items: center;
-        padding: .5rem;
 		margin-top: 1rem;
 		width: 90%;
 	}
 
 	.form input {
-		width: 40%;
+		width: 50%;
 		height: 45px;
 		padding: 0 15px;
 		color: var(--font);
@@ -67,13 +71,13 @@ export default({
 
 	@media screen and (max-width: 768px) {
 		.form input {
-			width: 65%;
+			width: 75%;
 		}
 	}
 
 	@media screen and (max-width: 550px) {
 		.form input {
-			width: 100%;
+			width: 73%;
 		}
 	}
 </style>

@@ -64,7 +64,7 @@
 
     @media screen and (max-width: 500px) {
         .tasks {
-            width: 90%;
+            width: 85%;
             grid-template-columns: repeat(2, 1fr);
         }
     }

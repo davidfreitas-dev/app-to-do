@@ -8,9 +8,14 @@
 </template>
 
 <script>
+import { IonIcon } from '@ionic/vue';
+
 export default {
     props: {
         task: { type: Object, required: true }
+    },
+    components: {
+        IonIcon,
     },
     computed: {
         stateClass() {

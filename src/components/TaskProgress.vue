@@ -56,7 +56,7 @@ export default({
 
     @media screen and (max-width: 550px) {
         .progress {
-            width: 85%;
+            width: 80%;
         }
     }
 </style>

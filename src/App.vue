@@ -37,13 +37,12 @@
 </template>
 
 <script>
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
+import { IonApp, IonContent, IonMenu, IonHeader, IonToolbar, IonTitle, IonList, IonMenuToggle, IonItem, IonIcon, IonLabel, IonFooter, IonRouterOutlet } from '@ionic/vue';
 
 export default ({
   name: 'App',
   components: {
-    IonApp,
-    IonRouterOutlet
+    IonApp, IonContent, IonMenu, IonHeader, IonToolbar, IonTitle, IonList, IonMenuToggle, IonItem, IonIcon, IonLabel, IonFooter, IonRouterOutlet
   }
 });
 </script>
