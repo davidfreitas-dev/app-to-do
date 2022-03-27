@@ -139,10 +139,6 @@ export default ({
   text-decoration: none;
 }
 
-ion-title, ion-icon {
-  color: var(--font);
-}
-
 ion-toggle {
   --background: #c3c3c3;
   --background-checked: var(--hover-main);

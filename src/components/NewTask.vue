@@ -52,7 +52,6 @@ export default({
 		height: 45px;
 		border: none;
 		padding: 0 15px;
-		color: #fff;
 		font-size: 1.5rem;
 		font-weight: bold;
 		border-radius: 5px;
@@ -60,6 +59,10 @@ export default({
 		border-bottom-left-radius: 0;
 		background-color: var(--main);
 		cursor: pointer;
+	}
+
+	ion-icon {
+		color: #fff;
 	}
 
 	@media screen and (max-width: 768px) {

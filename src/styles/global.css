@@ -27,9 +27,8 @@
     --ion-background-color: var(--bg);
 }
 
-body {
-    background-color: var(--bg);
-    transition: 0.2s linear;
+ion-title, ion-icon, ion-item {
+    color: var(--font);
 }
 
 .main-color {

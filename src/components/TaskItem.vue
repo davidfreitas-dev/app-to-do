@@ -85,6 +85,10 @@ export default {
         margin-top: 5px;
     }
 
+    ion-icon {
+		color: #fff;
+	}
+
     @media screen and (max-width: 768px) {
         .task {
             height: 60px;
