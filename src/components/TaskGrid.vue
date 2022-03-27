@@ -32,7 +32,7 @@
         grid-template-columns: repeat(5, 1fr);
         justify-items: center;
 		margin: 1rem 0;
-        width: 95%;
+        width: 90%;
 	}
 
     .no-task {
@@ -50,14 +50,14 @@
 
     @media screen and (max-width: 1024px) {
         .tasks {
-            width: 100%;
+            width: 80%;
             grid-template-columns: repeat(4, 1fr);
         }
     }
 
     @media screen and (max-width: 900px) {
         .tasks {
-            width: 85%;
+            width: 75%;
             grid-template-columns: repeat(3, 1fr);
         }
     }

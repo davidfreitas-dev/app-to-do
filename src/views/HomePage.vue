@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { Storage } from '@capacitor/storage';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonRow, IonButtons, IonMenuButton, IonToggle, IonIcon } from '@ionic/vue';
 import TaskProgress from '@/components/TaskProgress'
 import NewTask from '@/components/NewTask'
@@ -66,12 +67,20 @@ export default ({
   watch: {
     tasks: {
       deep: true,
-      handler() {
-        localStorage.setItem('tasks', JSON.stringify(this.tasks))
+      async handler() {
+        await Storage.set({
+          key: 'tasks',
+          value: JSON.stringify(this.tasks)
+        });
       }
     }
   },
   methods: {
+    async getTasks() {
+      const json = await Storage.get({ key: 'tasks' })
+      const array = JSON.parse(json.value) || []
+      this.tasks = Array.isArray(array) ? array : []
+    },
     taskAdd(task) {
       if (task.name != '') {
         const sameName = t => t.name === task.name
@@ -110,11 +119,8 @@ export default ({
   created() {
     this.$nextTick(() => {
       this.loadColorsTheme();
+      this.getTasks();
     });
-    
-    const json = localStorage.getItem('tasks')
-    const array = JSON.parse(json) || []
-    this.tasks = Array.isArray(array) ? array : []
   }
 });
 </script>
@@ -150,5 +156,18 @@ ion-toggle {
 
   --handle-background: #fff;
   --handle-background-checked: var(--main);
+}
+
+@media only screen and (min-width: 550px) {
+	ion-toolbar {
+    width: 85%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+	ion-toolbar {
+    width: 70%;
+    margin: auto;
+  }
 }
 </style>
