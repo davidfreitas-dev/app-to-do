@@ -33,35 +33,38 @@ export default {
 		width: 180px;
 		height: 75px;
 		border-radius: 5px;
-        cursor: pointer;
         user-select: none;
+        cursor: pointer;
 	}
 
     .task small {
-        max-width: 75%;
+        color: #f1f1f1;
 		font-size: 1.1rem;
         font-weight: 500;
         line-height: 1.3rem;
         text-align: center;
+        max-width: 75%;
     }
 
 	.pending {		
-		border-left: 7px solid rgb(245, 38, 38);
-		background-color: tomato;
+		border-left: 7px solid #da4e5e;
+		background-color: var(--danger);
 	}
 
 	.done {		
-		border-left: 7px solid seagreen;
-		background-color: rgb(52, 170, 103);
+		border-left: 7px solid #37a188;
+		background-color: var(--main);
 		text-decoration: line-through
 	}
 
     .pending .close {
-        background-color: rgb(245, 38, 38);
+        color: #f1f1f1;
+        background-color: #da4e5e;
     }
 
     .done .close {
-        background-color: seagreen;
+        color: #f1f1f1;
+        background-color: #37a188;
     }
 
     .close {        

@@ -28,27 +28,28 @@ export default({
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 90%;
         padding: .5rem;
 		margin-top: 1rem;
+		width: 90%;
 	}
 
 	.form input {
 		width: 40%;
-		height: 40px;
+		height: 45px;
 		padding: 0 15px;
-		color: #6c6c6c;
+		color: var(--font);
 		font-size: 1rem;
-		letter-spacing: .75px;
+		letter-spacing: .5px;
         outline: none;
 		border: none;
 		border-radius: 5px;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+		background-color: var(--secondary);
 	}
 
 	.form button {
-		height: 40px;
+		height: 45px;
 		border: none;
 		padding: 0 15px;
 		color: white;
@@ -57,7 +58,7 @@ export default({
 		border-radius: 5px;
 		border-top-left-radius: 0;
 		border-bottom-left-radius: 0;
-		background-color: lightseagreen;
+		background-color: var(--main);
 		cursor: pointer;
 	}
 

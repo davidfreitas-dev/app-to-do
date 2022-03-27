@@ -19,23 +19,23 @@ export default({
 
 <style>
 	.progress {
-        position: relative;
-		width: 50%;
-		height: 35px;
-		border: 2px solid seagreen;
-        border-radius: 5px;
-		margin-top: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+		width: 50%;
+		height: 40px;
+		border: 2px solid var(--main);
+        border-radius: 5px;
+		margin-top: 1rem;
+		font-weight: 700;
 	}
 
 	.progress-bar {
-        position: absolute;
-		background-color: seagreen;
 		height: 100%;
-		font-weight: 600;
+        position: absolute;
         align-self: flex-start;
+		background-color: var(--main);
 	}
 
     .progress-value {
