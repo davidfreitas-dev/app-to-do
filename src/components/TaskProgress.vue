@@ -48,9 +48,15 @@ export default({
         align-items: center;
     }
 
+    @media screen and (max-width: 1024px) {
+		.progress {
+			width: 65%;
+		}
+	}
+
     @media screen and (max-width: 768px) {
         .progress {
-            width: 75%;
+            width: 71%;
         }
     }
 

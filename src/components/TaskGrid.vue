@@ -29,10 +29,10 @@
 <style scoped>
 	.tasks {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         justify-items: center;
 		margin: 1rem 0;
-        width: 90%;
+        width: 60%;
 	}
 
     .no-task {
@@ -51,7 +51,6 @@
     @media screen and (max-width: 1024px) {
         .tasks {
             width: 80%;
-            grid-template-columns: repeat(4, 1fr);
         }
     }
 

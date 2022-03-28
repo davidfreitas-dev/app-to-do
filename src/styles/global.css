@@ -5,7 +5,8 @@
     --font: #686b6a;
     --main: #3eb398;
     --hover-main: #71ddc0;
-    --secondary: #f6f6f6;
+    --light: #f6f6f6;
+    --secondary: #ddd;
     --warning: #f4be38;
     --danger: #e25d6c;
     --shadow: #686b6a;
@@ -16,7 +17,8 @@
     --font: #fff;
     --main: #3eb398;
     --hover-main: #71ddc0;
-    --secondary: #232a3b;
+    --light: #232a3b;
+    --secondary: #1d2331;
     --warning: #f4be38;
     --danger: #e25d6c;
     --shadow: #686b6a;

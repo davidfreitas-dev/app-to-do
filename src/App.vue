@@ -10,7 +10,7 @@
         <ion-list>
           <ion-menu-toggle>
             <ion-item router-link="/">
-              <ion-icon name="save" slot="start" class="main-color"></ion-icon>
+              <ion-icon name="list" slot="start" class="main-color"></ion-icon>
               <ion-label>Listas Salvas</ion-label>
             </ion-item>
           </ion-menu-toggle>

@@ -19,8 +19,8 @@
     
     <ion-content :fullscreen="true">
       <div id="container">
-        <task-progress :progress="progress"></task-progress>
         <new-task @taskAdded="taskAdd"></new-task>
+        <task-progress :progress="progress"></task-progress>
         <task-grid @taskDeleted="deleteTask" @taskStateChanged="toggleTaskState" :tasks="tasks"></task-grid>
       </div>
     </ion-content>

@@ -45,11 +45,11 @@ export default({
 		font-size: 1rem;
 		letter-spacing: .5px;
         outline: none;
-		border: none;
+		border: 1px solid var(--secondary);
 		border-radius: 5px;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
-		background-color: var(--secondary);
+		background-color: var(--light);
 	}
 
 	.form button {
@@ -69,9 +69,15 @@ export default({
 		color: #fff;
 	}
 
+	@media screen and (max-width: 1024px) {
+		.form input {
+			width: 65%;
+		}
+	}
+
 	@media screen and (max-width: 768px) {
 		.form input {
-			width: 75%;
+			width: 70%;
 		}
 	}
 
