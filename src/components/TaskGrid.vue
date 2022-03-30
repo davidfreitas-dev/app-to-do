@@ -39,7 +39,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
+        color: var(--font);
         font-size: 1rem;
         width: 100%;
     }

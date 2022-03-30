@@ -46,3 +46,9 @@ export default ({
   }
 });
 </script>
+
+<style scoped>
+ion-footer {
+  color: var(--font);
+}
+</style>

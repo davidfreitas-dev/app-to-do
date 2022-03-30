@@ -1,6 +1,6 @@
 {
   "appId": "com.taskmanager.mobile",
   "appName": "Task Manager",
-  "webDir": "public",
+  "webDir": "dist",
   "bundledWebRuntime": false
 }
