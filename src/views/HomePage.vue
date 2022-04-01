@@ -6,6 +6,7 @@
           <ion-menu-button menu="main-menu" class="main-color"></ion-menu-button>
         </ion-buttons>
         <ion-title>Task Manager</ion-title>
+        <ion-icon name="save" slot="end" class="ion-padding" @click="handleShowModal"></ion-icon>
       </ion-toolbar>
     </ion-header>
     
@@ -14,6 +15,7 @@
         <new-task @taskAdded="taskAdd"></new-task>
         <task-progress :progress="progress"></task-progress>
         <task-grid @taskDeleted="deleteTask" @taskStateChanged="toggleTaskState" :tasks="tasks"></task-grid>
+        <modal-save ref="modal" @handleSave="handleSave"></modal-save>
       </div>
     </ion-content>
   </ion-page>
@@ -21,10 +23,11 @@
 
 <script>
 import { Storage } from '@capacitor/storage';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonMenuButton, } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonIcon, IonMenuButton, } from '@ionic/vue';
 import TaskProgress from '@/components/TaskProgress'
 import NewTask from '@/components/NewTask'
 import TaskGrid from '@/components/TaskGrid'
+import ModalSave from '@/components/ModalSave'
 
 export default ({
   name: 'HomePage',
@@ -34,16 +37,19 @@ export default ({
     IonPage,
     IonTitle,
     IonToolbar,
-    IonButtons,
+    IonButtons, 
+    IonIcon,
     IonMenuButton,
 
     TaskProgress,
     NewTask,
-    TaskGrid
+    TaskGrid,
+    ModalSave
   },
   data() {
 			return {
-				tasks: []
+				tasks: [],
+        tasksList: []
 			}
 		},
   computed: {
@@ -51,7 +57,7 @@ export default ({
       const total = this.tasks.length
       const done = this.tasks.filter(t => !t.pending).length
       return Math.round(done / total * 100) || 0
-    }
+    },
   },
   watch: {
     tasks: {
@@ -62,13 +68,27 @@ export default ({
           value: JSON.stringify(this.tasks)
         });
       }
-    }
+    },
+    tasksList: {
+      deep: true,
+      async handler() {
+        await Storage.set({
+          key: 'tasksList',
+          value: JSON.stringify(this.tasksList)
+        });
+      }
+    },
   },
   methods: {
     async getTasks() {
       const json = await Storage.get({ key: 'tasks' })
       const array = JSON.parse(json.value) || []
       this.tasks = Array.isArray(array) ? array : []
+    },
+    async getTasksList() {
+      const json = await Storage.get({ key: 'tasksList' })
+      const array = JSON.parse(json.value) || []
+      this.tasksList = Array.isArray(array) ? array : []
     },
     taskAdd(task) {
       if (task.name != '') {
@@ -90,10 +110,21 @@ export default ({
     toggleTaskState(i) {
       this.tasks[i].pending = !this.tasks[i].pending
     },
+    handleShowModal() {
+      this.$refs.modal.showModal()
+    },
+    async handleSave(listName) {
+      this.tasksList.unshift({
+        id: this.tasksList.length + 1,
+        name: listName,
+        tasks: this.tasks
+      })
+    }
   },
   created() {
     this.$nextTick(() => {
       this.getTasks();
+      this.getTasksList();
     });
   }
 });
@@ -122,6 +153,11 @@ export default ({
 
 #container a {
   text-decoration: none;
+}
+
+ion-icon {
+  font-size: 1.3rem;
+  color: var(--main);
 }
 
 @media only screen and (min-width: 550px) {
