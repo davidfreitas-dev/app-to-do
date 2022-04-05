@@ -121,7 +121,7 @@ input {
 }
 .close:hover,
 .close:focus {
-    color: black;
+    color: #ddd;
     text-decoration: none;
     cursor: pointer;
 }

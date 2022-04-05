@@ -15,7 +15,7 @@
       <ion-content>
         <ion-list>
           <ion-menu-toggle>
-            <ion-item router-link="/">
+            <ion-item router-link="/lists">
               <ion-icon name="list" slot="start" class="main-color"></ion-icon>
               <ion-label>Listas Salvas</ion-label>
             </ion-item>
