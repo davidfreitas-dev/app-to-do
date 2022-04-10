@@ -33,7 +33,6 @@ export default {
 </script>
 
 <style scoped>
-/* The Modal (background) */
 .modal-save {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -45,7 +44,7 @@ export default {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-/* Modal Content/Box */
+
 .modal-content {
     display: flex;
     flex-direction: column;
