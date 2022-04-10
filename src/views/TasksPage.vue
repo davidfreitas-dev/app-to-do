@@ -77,7 +77,7 @@ export default ({
     async getLists() {
       const json = await Storage.get({ key: 'lists' })
       const array = JSON.parse(json.value) || []
-      this.list = Array.isArray(array) ? array : []
+      this.lists = Array.isArray(array) ? array : []
     },
     taskAdd(task) {
       if (task.name != '') {

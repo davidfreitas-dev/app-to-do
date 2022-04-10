@@ -1,5 +1,5 @@
 <template>
-    <ion-row class="ion-justify-content-center ion-align-items-center">
+    <ion-row class="ion-justify-content-center ion-align-items-center ion-padding">
         <ion-button class="btn-main" @click="handleNew">Nova Lista</ion-button>
     </ion-row>
     <ion-list v-if="lists.length">
