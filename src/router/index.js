@@ -10,6 +10,10 @@ const routes = [
     path: '/home',
     name: 'Home',
     component: HomePage
+  },
+  {
+    path: '/tasks',
+    component: () => import('../views/TasksPage.vue')
   }
 ]
 

@@ -1,6 +1,6 @@
 <template>
     <div class="progress">
-        <div class="progress-bar" :style="{width: progress + '%'}">
+        <div class="progress-bar" :style="{ width: progress + '%' }">
                        
         </div>
         <div class="progress-value">
@@ -12,7 +12,7 @@
 <script>
 export default({
     props: {
-        progress: { type: Number, default: 0}
+        progress: { type: Number, default: 0 }
     }    
 })
 </script>
