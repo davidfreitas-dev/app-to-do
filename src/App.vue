@@ -15,7 +15,7 @@
       <ion-content>
         <ion-list>
           <ion-menu-toggle>
-            <ion-item router-link="/home">
+            <ion-item @click="$router.go(-1)">
               <ion-icon name="list" slot="start" class="main-color"></ion-icon>
               <ion-label>Listas Salvas</ion-label>
             </ion-item>
