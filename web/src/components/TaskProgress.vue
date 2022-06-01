@@ -20,9 +20,9 @@ export default({
 <style>
 	.progress {
         position: relative;
-		width: 50%;
-		height: 35px;
-		border: 2px solid seagreen;
+		width: 65%;
+		height: 40px;
+		border: 2px solid var(--primary);
         border-radius: 5px;
 		margin-top: 1rem;
         display: flex;
@@ -32,7 +32,7 @@ export default({
 
 	.progress-bar {
         position: absolute;
-		background-color: seagreen;
+		background-color: var(--primary);
 		height: 100%;
 		font-weight: 600;
         align-self: flex-start;
@@ -41,9 +41,11 @@ export default({
     .progress-value {
         z-index: 1;
         height: 100%;
+        font-size: 1.2rem;
         display: flex;
         justify-content: center;        
         align-items: center;
+        text-shadow: 1px 1px 3px #666;
     }
 
     @media screen and (max-width: 768px) {
@@ -54,7 +56,7 @@ export default({
 
     @media screen and (max-width: 550px) {
         .progress {
-            width: 85%;
+            width: 89%;
         }
     }
 </style>

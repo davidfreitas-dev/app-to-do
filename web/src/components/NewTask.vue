@@ -26,13 +26,13 @@ export default({
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 90%;
+		width: 93%;
         padding: .5rem;
 		margin-top: 1rem;
 	}
 
 	.form input {
-		width: 45%;
+		width: 65%;
 		height: 45px;
 		padding: 0 15px;
 		color: #6c6c6c;
@@ -60,7 +60,7 @@ export default({
 
 	@media screen and (max-width: 768px) {
 		.form input {
-			width: 65%;
+			width: 75%;
 		}
 	}
 

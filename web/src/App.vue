@@ -74,9 +74,9 @@
 	}
 	
 	body {
-		color: #fff;
+		color: var(--font);
 		font-family: 'Poppins', sans-serif;
-		background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115));
+		background-color: var(--bg);
 	}
 
 	#app {
@@ -108,7 +108,7 @@
 
 	@media screen and (max-width: 768px) {
 		main {
-			width: 95%;
+			width: 100%;
 		}
 	}
 </style>

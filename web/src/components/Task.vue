@@ -33,33 +33,32 @@ export default {
 		border-radius: 5px;
         cursor: pointer;
         user-select: none;
+        text-shadow: 1px 1px 3px #666;
 	}
 
     .task small {
         max-width: 75%;
-		font-size: 1.1rem;
+		font-size: 1.3rem;
         font-weight: 500;
         line-height: 1.3rem;
         text-align: center;
     }
 
-	.pending {		
-		border-left: 7px solid rgb(245, 38, 38);
-		background-color: tomato;
+	.pending {
+		background: var(--secondary);
 	}
 
-	.done {		
-		border-left: 7px solid seagreen;
-		background-color: rgb(52, 170, 103);
-		text-decoration: line-through
+	.done {
+		text-decoration: line-through;
+		background: var(--primary);
 	}
 
     .pending .close {
-        background-color: rgb(245, 38, 38);
+        background-color: #d64542;
     }
 
     .done .close {
-        background-color: seagreen;
+        background-color: #269255;
     }
 
     .close {        
@@ -82,7 +81,7 @@ export default {
     @media screen and (max-width: 768px) {
         .task {
             height: 60px;
-            width: 140px;
+            width: 155px;
         }
 
         .task small {
