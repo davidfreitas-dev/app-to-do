@@ -1,9 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 :root {
 	--bg: #191b2a;
 	--font: #ffffff;	
-	--primary: #2fac65;
+	--primary: #30c671;
 	--secondary: #fe5654;
 	--tertiary: #52546b;
+}
+
+* {
+	font-family: 'Quicksand', sans-serif;
+	list-style-type: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+}
+
+main {
+    padding-top: 1rem;
+}
+
+h1 {
+	color: var(--font);
+	text-align: center;
+	margin: 1rem 0;
+}
+
+.wrapper {
+	padding: .75rem 1rem;
+}
+
+.input__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97%;
+    margin: 0 auto;
+}
+
+.input__container input {
+    width: calc(100% - 60px);
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 1.3rem;
+    outline: none;
+    border: 1px solid #232534;
+    color: var(--font);
+    border-radius: 8px;
+    background: #232534;
+}
+
+.input__container button {
+    width: 48px;
+    height: 48px;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    border-radius: 8px;
+    color: var(--font);
+    background: var(--primary);
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 97%;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 3px solid var(--primary);
+}
+
+.progress__bar {
+    position: absolute;
+    height: 100%;
+    align-self: flex-start;
+    background-color: var(--primary);
+}
+
+.progress__value {
+    display: flex;
+    justify-content: center;        
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px #666;
+    color: var(--font);
+    height: 100%;
+    z-index: 1;
+}
+
+.task__grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+    color: var(--font);
+    width: 155px;
+    height: 70px;
+    margin: .5rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: var(--secondary);
+    text-shadow: 1px 1px 3px #666;
+	cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    background: var(--primary);
+}
+
+.pending {
+    background: var(--secondary);
+}
+
+.pending .close {
+	background-color: #d6413e;
+}
+
+.done .close {
+	background-color: #2eb368;
+}
+
+.close {        
+	display: flex;
+	justify-content: center;
+	align-content: center;   
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 20px;
+	height: 20px;
+	font-size: .65rem;
+	border-radius: 10px;
+}
+
+.close::before {
+	margin-top: 5px;
+}
+
+@media only screen and (min-width: 550px) {
+    .task__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .progress {
+        height: 40px;
+    }
+
+    .task__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .task__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1279px) {
+    main {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    .task__grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    main {
+        width: 50%;
+        margin: 0 auto;
+    }
 }

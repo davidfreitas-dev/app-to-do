@@ -2,8 +2,8 @@
 	<div id="app">
 		<main>
 			<h1>Lista de Tarefas</h1>
-			<TaskProgress :progress="progress"/>
 			<NewTask @taskAdded="taskAdd"/>
+			<TaskProgress :progress="progress"/>
 			<TaskGrid @taskDeleted="deleteTask" @taskStateChanged="toggleTaskState" :tasks="tasks"/>
 		</main>
 	</div>
@@ -65,50 +65,3 @@
 		}
 	}
 </script>
-
-<style>
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-	
-	body {
-		color: var(--font);
-		font-family: 'Poppins', sans-serif;
-		background-color: var(--bg);
-	}
-
-	#app {
-		display: flex;
-		flex-direction: column;
-		justify-content: top;
-		align-items: center;
-		height: 100vh;
-	}
-
-	main {
-		width: 80%;
-		display: flex;
-		flex-direction: column;
-		justify-content: top;
-		align-items: center;
-	}
-
-	h1 {
-		font-weight: 500;
-		margin: 1.5rem 0 1rem 0;
-	}
-
-	@media screen and (max-width: 992px) {
-		main {
-			width: 90%;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		main {
-			width: 100%;
-		}
-	}
-</style>
